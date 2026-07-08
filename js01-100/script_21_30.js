@@ -201,21 +201,21 @@
 
 // $$$ cls 27, and or shorthand
 
-let name = 'Bangladesh';
-let fullName = name;
+// let name = 'Bangladesh';
+// let fullName = name;
 
-if ( name.length === 0) {
-    fullName = 'Sajal'
-}else{
-    fullName = name;
-}
-console.log(fullName);
+// if ( name.length === 0) {
+//     fullName = 'Sajal'
+// }else{
+//     fullName = name;
+// }
+// console.log(fullName);
 // this full code can write into one line using or operator short hand
 
-let fullNme = name || 'sajal';
-console.log(fullNme);
+// let fullNme = name || 'sajal';
+// console.log(fullNme);
 
-let isOk = true;
+// let isOk = true;
 // if ( isOk) {
 //     console.log('all is ok');
 // }else{
@@ -223,4 +223,39 @@ let isOk = true;
 // }
 
 // this code also can write in one line using and operator short hand
-isOk && console.log('all is okay');
+// isOk && console.log('all is okay');
+
+// &&& cls 28, introduction to loops
+// there are tree types of loops
+//1. for loop , 2. while loop , 3, do while loop. for loops three types - for, for in, for of.
+
+// *** cls 29, for loop
+
+// let sum = 0;
+// for (let i = 0; i <= 20; i++){
+//     // console.log(i);
+//     console.log(sum + ' + ' + i + ' = ' + (sum + i));
+//     sum += i;
+// }
+// console.log('result = ' + sum);
+
+// let total = 0;
+// for(let i = 0; i <= 10; i++){
+//     if (i % 2 === 0) {
+//         // console.log(i);
+//         console.log(total + ' + ' + i + ' = ' + (total + i));
+//         total += i;
+//     }
+// }
+// console.log(total);
+
+let oddTotal = 0;
+for(let i = 0; i <= 10; i++){
+    if (i % 2 === 1) {
+        // console.log(i);
+        console.log(oddTotal + ' + ' + i + ' = ' + (oddTotal + i));
+        oddTotal += i;
+    }
+}
+
+console.log('Result of oddTotal is ' + oddTotal);
