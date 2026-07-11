@@ -249,13 +249,71 @@
 // }
 // console.log(total);
 
-let oddTotal = 0;
-for(let i = 0; i <= 10; i++){
-    if (i % 2 === 1) {
-        // console.log(i);
-        console.log(oddTotal + ' + ' + i + ' = ' + (oddTotal + i));
-        oddTotal += i;
-    }
-}
+// let oddTotal = 0;
+// let evenTotal = 0;
 
-console.log('Result of oddTotal is ' + oddTotal);
+// for(let i = 0; i <= 10; i++){
+//     if (i % 2 === 1) {
+//         // console.log(i);
+//         // console.log(oddTotal + ' + ' + i + ' = ' + (oddTotal + i));
+//         oddTotal += i;
+//     }else{
+//         evenTotal += i;
+//     }
+//     // if (i % 2 === 0) {
+//     //     // console.log(evenTotal + ' + ' + i + ' = ' + (evenTotal + i));
+//     //     evenTotal += i;
+//     // }
+// }
+
+// let dif = evenTotal - oddTotal;
+// console.log('Result of oddTotal is ' + oddTotal);
+// console.log('Result of evenTotal is ' + evenTotal);
+// console.log('dif of two is ' + dif);
+
+// $$$$ this code can replace using ternary
+
+// let oddTotal = 0;
+// let evenTotal = 0;
+
+// for (let i = 0; i <= 10; i++){
+//     i % 2 === 1 ? oddTotal += i : evenTotal += i;
+// }
+
+// let dif = evenTotal - oddTotal;
+// console.log('Result of oddTotal is ' + oddTotal);
+// console.log('Result of evenTotal is ' + evenTotal);
+// console.log('dif of two is ' + dif);
+
+// $$$ cls 30, while loop
+
+// let i = 0;
+
+// while (i <= 10) {
+//     console.log(i + ' sajal');
+//     i++;
+// }
+
+// let isRunning = true;
+
+// while (isRunning) {
+//     let random = Math.round(Math.random() * 10 + 1);
+//     if (random === 9) {
+//         console.log('Winner! You got your prize.');
+//         isRunning = false; 
+//     }else{
+//         console.log('You got a random number ' + random);
+//     }
+// }
+
+
+// when i want to run code for one time, it will be if condition code.
+// let random = Math.floor(Math.random() * 10 + 1);
+// if (random === 9) {
+//     console.log('Winner');
+
+// }else{
+//     console.log('you got a random ' + random);
+// }
+
+
