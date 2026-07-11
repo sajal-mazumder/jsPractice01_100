@@ -251,4 +251,3 @@ console.log('   abcdef   '.trim());
 console.log(d.split(' '));
 console.log(c.startsWith('s')); // case sensitive answer
 console.log(d.endsWith('r'));
-
