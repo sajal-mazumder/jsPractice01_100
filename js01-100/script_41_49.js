@@ -208,8 +208,8 @@ let arr2 = [2, 3, 4, 6, 7, 5];
 // console.log(arr3);
 
 // console.log(Array.isArray(arr)); // return true or false
-let arr4 = Array.from(arr);
-arr4[2] = 678;
-// console.log(arr4);
-console.log(arr); // data not changed 
-console.log(arr4); // create new array from arr and data replaced as wanted
+// let arr4 = Array.from(arr);
+// arr4[2] = 678;
+// // console.log(arr4);
+// console.log(arr); // data not changed 
+// console.log(arr4); // create new array from arr and data replaced as wanted
