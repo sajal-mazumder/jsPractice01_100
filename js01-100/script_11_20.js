@@ -29,6 +29,9 @@ let n3 = 55543;
 // console.log(n3.toString()); // output
 // console.log(String(n3)); // working
 
+console.log(String(Infinity));
+console.log();
+
 // *** falsy value: 0, null, undefined, ""(empty string)
 
 // console.log(Boolean(0)); // false
