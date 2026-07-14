@@ -182,7 +182,7 @@ comment */
 3. else if condition 
 4. switch statement */
 
-// $$$ cls 21, if condition
+// $$$ cls 21, 22, 23, if condition, else condition, else if condition *** 
 
 // let a = 19;
 // let b = 20;
@@ -212,10 +212,10 @@ If the temperature is between 18°C and 25°C (inclusive), keep the climate cont
 If the temperature is above 25°C, turn on the "AC".
 Goal: Determine the thermostat action.*/
 
-// let temp = 17;
+// let temp = 29;
 // if (temp < 18) {
 //     console.log('Turn on the Heating');
-// }else if (temp >= 18 && temp <= 25) {
+// }else if ( temp <= 25) {
 //     console.log('Keep the climate control off.');
 // }else {
 //     console.log('It is hot climate, turn on AC');
@@ -230,7 +230,7 @@ If the password length is 8 or more characters, check if it contains numbers:
 If it has numbers, return "Strong".If it has no numbers, return "Weak".
 Goal: Return the correct security label.*/
 
-// let password = 'abehhh####0';
+// let password = 'abehhh####';
 // let hasNumber = /\d/.test(password);
 // let hasSpecialChar = /[^A-Za-z0-9]/.test(password);
 
@@ -271,7 +271,7 @@ Seniors aged 65 and older get a ticket for £8.
 For everyone else (ages 12 to 64): If they are a student, they pay £10. If they are not a student, they pay £13.
 Goal: Determine the ticket price.*/
 
-// let age = 20;
+// let age = 70;
 // let isStudent = true;
 
 // if (age < 12) {
@@ -281,13 +281,13 @@ Goal: Determine the ticket price.*/
 // }else{
 //      if (isStudent) {
 //         console.log('ticket price is 10$');
-// }else{
+//     }else{
 //     console.log('ticket price is 13$');
-// }
+//     }
 // }
 
 
-/*A smart toll booth calculates fees based on the vehicle type and the time of day.
+/*problem 1: A smart toll booth calculates fees based on the vehicle type and the time of day.
 Inputs: Vehicle Type ("Car", "Truck", or "Motorbike") and Peak Hours (True/False).
 Logic to figure out:
 Motorbikes always pay £2.
@@ -309,3 +309,158 @@ Goal: Determine the correct toll amount for a given vehicle.*/
 //         console.log('pay 5$');
 //     }
 // }
+
+//  cls 24, switch statement
+
+// let date = new Date();
+// switch (date.getDay()) {
+//     case 0:
+//         console.log('sunday');
+//         break;
+//     case 1:
+//         console.log('monday');
+//         break;
+//     case 2:
+//         console.log('tuesday');
+//         break;
+//     case 3:
+//         console.log('wednesday');
+//         break;
+//     case 4:
+//         console.log('thursday');
+//         break;
+//     case 5:
+//         console.log('friday');
+//         break;
+//     case 6:
+//         console.log('saturday');
+//         break;
+
+//     default:
+//         console.log('unwanted number');
+//         break;
+// }
+
+
+/*1. Traffic Light Simulator
+Accept a string variable representing a traffic light color ("red", "yellow", or "green"). 
+Log "Stop", "Slow down", or "Go" respectively. 
+Include a fallback message for any invalid color.*/
+
+// using switch statement
+
+// let lightColor = 'green';
+// switch (lightColor) {
+//     case 'red':
+//         console.log('stop');
+//         break;
+//     case 'yellow':
+//         console.log('slow down');
+//         break;
+//     case 'green':
+//         console.log('go go go!');
+//         break;
+
+//     default:
+//         console.log('invalid color');
+//         break;
+// }
+
+// using if else condition
+
+// if (lightColor === 'red') {
+//     console.log('stop');
+// }else if (lightColor === 'yellow') {
+//     console.log('slow down');
+// }else if (lightColor === 'green') {
+//     console.log('go');
+// }else{
+//     console.log('invalid color');
+// }
+
+/* 2. Movie Rating Guide
+Accept a letter grade representing a movie rating ("G", "PG", "PG-13", or "R"). 
+Log a short description of who is allowed to watch it. 
+Handle unknown rating codes gracefully.*/
+
+// let movieRate = 'w';
+// switch (movieRate) {
+//     case 'G':
+//         console.log('General Audience.(All ages admitted).');
+//         break;
+//     case 'PG':
+//         console.log('Parental Guidance.(Some metarials may not suitable for children).');
+//         break;
+//     case 'PG-13':
+//         console.log('Parents strongly cautiioned. some metarials may not appropriate for children under 13.');
+//         break;
+//     case 'R':
+//         console.log('Restricted. Under 17 requires accompanying parents or adult gurdains.');
+//         break;
+//     default:
+//         console.log('Unknown rating.');
+//         break;
+// }
+
+// using if else condition 
+
+// if (movieRate === 'G') {
+//     console.log('General Audience.(All ages admitted).');
+// }else if (movieRate === 'PG') {
+//     console.log('Parental Guidance.(Some metarials may not suitable for children).');
+// }else if (movieRate === 'PG-13') {
+//     console.log('Parents strongly cautiioned. some metarials may not appropriate for children under 13.');
+// }else if (movieRate === 'R') {
+//     console.log('Restricted. Under 17 requires accompanying parents or adult gurdains.');
+// }else{
+//     console.log('Unknown rating.');
+// }
+
+/* 3. Basic Calculator
+Accept two numbers and a math operator string ("+", "-", *, or "/"). 
+Perform the correct arithmetic operation based on the operator and print the result.*/
+
+// let a = 10;
+// let b = 5;
+// let operator = '/';
+// switch (operator) {
+//     case '+':
+//         console.log('the sum of a and b is ' + (a + b));
+//         break;
+//     case '-':
+//         console.log('the difference of a and b is ' + ( a - b));
+//         break;
+//     case '*':
+//         console.log('the multi of a and b is ' + ( a * b));
+//         break;
+//     case '/':
+//         console.log('the division of a and b is ' + ( a / b));
+//         break;
+//     case '%':
+//         console.log('the modulu of a and b is ' + ( a % b));
+//         break;
+//     default:
+//         console.log('unwanted operator.');
+//         break;
+// }
+
+/* 4. Gym Membership Tier
+Accept a membership level number (1 for Bronze, 2 for Silver, 3 for Gold). 
+Log the specific perks for that tier.
+ Make sure that higher tiers automatically inherit ("fall through" intentionally into) the perks of the lower tiers.*/
+
+ let tier = 5;
+ switch (tier) {
+    case 3:
+        console.log('you will get gold facilities.');
+        
+    case 2:
+        console.log('you will get silver facilities.');
+
+    case 1:
+        console.log('you will get bronze facilities.');
+        break;
+    default:
+        console.log('please select 1, 2, or 3.');
+        break;
+ }

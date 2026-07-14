@@ -63,7 +63,7 @@
 // let n5 = 45;
 
 // if (n3 > n4) {
-//     console.log('a is greater than n4');
+//     console.log('n3 is greater than n4');
 // }else if (n4 > n3 ) {
 //     console.log('n4 is greater than n3');
 // }else {
@@ -82,7 +82,36 @@
 
 // ### cls 24, switch statements
 
-// 
+let date = new Date();
+switch (date.getMonth()) {
+    case 0:
+        console.log('january');
+        break;
+    case 1: 
+        console.log('february');
+        break;
+    case 2:
+        console.log('march');
+        break;
+    case 3:
+        console.log('april');
+        break;
+    case 4:
+        console.log('may');
+        break;
+    case 5:
+        console.log('june');
+        break;
+    case 6:
+        console.log('july');
+        break;
+    case 7:
+        console.log('august');
+        break;
+    default:
+        console.log('unwanted number');
+        break;
+}
 
 // @@@ cls 25, logical operators, && || !
 
