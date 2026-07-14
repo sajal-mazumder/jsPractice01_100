@@ -449,18 +449,57 @@ Accept a membership level number (1 for Bronze, 2 for Silver, 3 for Gold).
 Log the specific perks for that tier.
  Make sure that higher tiers automatically inherit ("fall through" intentionally into) the perks of the lower tiers.*/
 
- let tier = 5;
- switch (tier) {
-    case 3:
-        console.log('you will get gold facilities.');
+//  let tier = 5;
+//  switch (tier) {
+//     case 3:
+//         console.log('you will get gold facilities.');
         
-    case 2:
-        console.log('you will get silver facilities.');
+//     case 2:
+//         console.log('you will get silver facilities.');
 
-    case 1:
-        console.log('you will get bronze facilities.');
-        break;
-    default:
-        console.log('please select 1, 2, or 3.');
-        break;
- }
+//     case 1:
+//         console.log('you will get bronze facilities.');
+//         break;
+//     default:
+//         console.log('please select 1, 2, or 3.');
+//         break;
+//  }
+
+/* 5. Fitness Workout Plan
+Accept a string for the current day of the week. 
+Log "Cardio" for Monday and Wednesday, "Strength" for Tuesday and Thursday, "Yoga" for Friday, and "Rest Day" for the weekend. 
+Group the matching days together efficiently.*/
+
+// let date = new Date();
+// switch (date.getDay()) {
+//     case 0: // sunday
+//         console.log('rest');
+//         break;
+//     case 1: // monday
+//     case 3: // wenesday
+//         console.log('cardio');
+//         break;
+//     case 2: // tuesday
+//     case 4: // thursday
+//         console.log('strenth');
+//         break;
+//     case 5:
+//     case 6:
+//         console.log('yoga');
+//     default:
+//         console.log('invalid number');
+//         break;
+// }
+
+let date1 = 'sajal';
+if (date1 === 'sunday') {
+    console.log('chutir din');
+}else if (date1 === 'monday' || date1 === 'wenesday') {
+    console.log('cardio');
+}else if (date1 === 'tuesday' || date1 === 'thursday') {
+    console.log('strenthen');
+}else if (date1 === 'friday' || date1 === 'saturday') {
+    console.log('yoga');
+}else{
+    console.log('invalid day.');
+}
