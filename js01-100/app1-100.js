@@ -768,8 +768,58 @@ However, if you are a Teacher, you can borrow books instantly (even without a ca
 let isTeacher = false;
 let hasCard = true;
 let hasOverdueFines = true;
-if (isTeacher || (hasCard && hasOverdueFines)) {
-    console.log('take your card.');
+if (isTeacher || (hasCard && !hasOverdueFines)) {
+    console.log('take your book.');
 }else{
-    console.log('sorry! no card for u right now.');
+    console.log('sorry! no book for u right now.');
+}
+
+/*
+Problem 1: The Gym Premium Zone
+A gym has a private VIP lounge. 
+A member can enter if they have a Premium Membership AND their account is active (not suspended). 
+However, any Gym Instructor/Staff can enter the lounge anytime automatically, even if they don't have a membership.
+Your stats: You are a regular member, your account is active, and you are not a staff member.
+*/
+
+// let isPremiumMember = true;
+// let isAccountActive = false;
+// let isStuff = false;
+// if (isStuff || (isPremiumMember && isAccountActive)) {
+//     console.log('VIP lounge entry ok.');
+// }else{
+//     console.log('no pass.');
+// }
+
+/*
+Problem 2: The Car Rental
+A car rental company will rent you a car if you are over 21 years old AND have a valid driver's license. 
+However, if you are an international tourist, you can bypass the age limit but you absolutely must have an international driver's license.
+Your stats: You are 19 years old, you are an international tourist, and you have an international driver's license.*/
+
+let age = 39;
+let hasDriverLicense = true;
+let intLicense = false;
+let intTourist = true;
+
+if ((intLicense && intTourist) || ( age > 21 && hasDriverLicense)) {
+    console.log('can rent car.');
+}else{
+    console.log('sorry, no car for u.');
+}
+
+/*
+Problem 3: The Job Interview Shortlist
+A company automatically invites an applicant for an interview if they have a Recommendation Letter from the CEO. 
+For regular applicants, they must have a Computer Science Degree AND at least 2 years of experience to get shortlisted.
+Your stats: You do not have a recommendation letter, you have a CS degree, and you have 5 years of experience.*/
+
+let hasRecommendation = true;
+let hasCSDegree = false;
+let hasExperience = true;
+
+if (hasRecommendation || (hasCSDegree && hasExperience)) {
+    console.log('please attend interview.');
+}else{
+    console.log('u r not eligible for interview.');
 }
