@@ -491,15 +491,285 @@ Group the matching days together efficiently.*/
 //         break;
 // }
 
-let date1 = 'sajal';
-if (date1 === 'sunday') {
-    console.log('chutir din');
-}else if (date1 === 'monday' || date1 === 'wenesday') {
-    console.log('cardio');
-}else if (date1 === 'tuesday' || date1 === 'thursday') {
-    console.log('strenthen');
-}else if (date1 === 'friday' || date1 === 'saturday') {
-    console.log('yoga');
+// let date1 = 'sajal';
+// if (date1 === 'sunday') {
+//     console.log('chutir din');
+// }else if (date1 === 'monday' || date1 === 'wenesday') {
+//     console.log('cardio');
+// }else if (date1 === 'tuesday' || date1 === 'thursday') {
+//     console.log('strenthen');
+// }else if (date1 === 'friday' || date1 === 'saturday') {
+//     console.log('yoga');
+// }else{
+//     console.log('invalid day.');
+// }
+
+// $$$ cls 25, logical && , || operator
+
+/* 
+true && true = true;
+true && false = false;
+false && false = false;
+
+true || true = true;
+true || false = true;
+false || false = false;
+*/
+
+// let a = 10;
+// let b = 15; 
+// let c = 20;
+// let d = 25;
+
+// if ( a > b && c > d ) {
+//     console.log('true');
+// }else{
+//     console.log('false');
+// }
+
+// if ( !(a > b && c > d) ) {
+//     console.log('true');
+// }else{
+//     console.log('false');
+// }
+
+// if ( !!(a > b && c > d) ) {
+//     console.log('true');
+// }else{
+//     console.log('false');
+// }
+
+// if ( a > b || c < d ) {
+//     console.log('true');
+// }else{
+//     console.log('false');
+// }
+
+
+/*
+Problem 1: The Amusement Park Ride
+A roller coaster requires a rider to be over 120 cm tall AND accompanied by an adult, OR they can ride alone if they are over 140 cm tall.
+Your stats: You are 135 cm tall and you are alone.
+Is the final scenario TRUE or FALSE for you being allowed to ride?
+*/
+
+// let height = 125;
+// let accompany = 'adult';
+// if ((height > 120 && accompany === 'young')|| (height > 140 && accompany === 'young')) {
+//     console.log('alowed to ride.');
+// }else{
+//     console.log('you r not allowed to ride alone.');
+// }
+
+/*Problem 2: The Online Discount
+A website gives a discount if a customer is a new user AND has a promo code. 
+Alternatively, they get the discount if they are a VIP member (regardless of the code or user age).
+Your stats: You are a new user, you do not have a promo code, and you are a VIP member.
+Is the final scenario TRUE or FALSE for you getting the discount?
+*/
+
+// let me = 'new user';
+// let isVIP = false;
+// let hasPromo = true;
+// if ( isVIP || (me === 'new user' && hasPromo === true)) {
+//     console.log('you r eligible to get discount.');
+// }else{
+//     console.log('you r not eligible for discount.');
+// }
+
+
+/*Problem 3: The Automated Greenhouse
+The watering system turns on if the soil is dry AND the temperature is above 25°C. 
+It will also turn on if it is past 8:00 PM (regardless of soil or temperature).
+Current status: The soil is wet, the temperature is 30°C, and it is 9:00 PM.
+Is the final scenario TRUE or FALSE for the watering system turning on?
+*/
+
+// let soil = 'wet';
+// let temp = 30;
+// let time = 19; // 9 pm according to 24 hour system.
+// if (time > 20 || (soil === 'dry' && temp > 25) ) {
+//     console.log('watering system turn on');
+// }else{
+//     console.log('watering system turn off');
+// }
+
+/*Problem 4: The Exam Eligibility
+To sit for an exam, a student must have paid their fees AND have an attendance over 75%. However, if they have a medical waiver, they only need to have paid their fees.
+Your stats: You paid your fees, your attendance is 60%, and you do not have a medical waiver.
+Is the final scenario TRUE or FALSE for you being eligible for the exam?
+*/
+
+// let paidFees = true;
+// let attendence = 60;
+// let medicalWaiver = false;
+// if ( paidFees === true || (medicalWaiver === true && attendence >= 75)) {
+//     console.log('you are eligible for exam.');
+// }else{
+//     console.log('not eligible for exam.');
+// }
+
+/*Problem 5: The Smartphone Unlock
+A phone will unlock if Face ID matches OR if the correct PIN is entered. 
+However, the phone will absolutely not unlock if the battery is completely dead, no matter what.
+Current status: Face ID matches, the PIN is incorrect, and the battery is completely dead.
+Is the final scenario TRUE or FALSE for the phone unlocking?
+*/
+
+// let battery = false;
+// let faceID = true;
+// let isPIN = false;
+
+// if (battery === true && (faceID === true || isPIN === true)) {
+//     console.log('you can unlock your phone.');
+// }else{
+//     console.log('failed to unlock phone.');
+// }
+
+// if (battery && (faceID || isPIN)) {
+//     console.log('unlock');
+// }else{
+//     console.log('failed.');
+// }
+
+/*
+প্রবলেম ১: ওটিপি ভেরিফিকেশন (OTP Verification)
+একটি অ্যাপে লগইন করতে হলে ইউজারকে অবশ্যই সঠিক ওটিপি (OTP) দিতে হবে। 
+তবে ইউজার যদি "Trusted Device" ব্যবহার করে, তবে ওটিপি ছাড়াই লগইন করা যাবে। 
+কিন্তু ইউজার যদি সরাসরি ব্লকড (Blocked) থাকে, তবে কোনোভাবেই লগইন করা যাবে না।
+*/
+
+// let isBlocked = true;
+// let isTrustedDevice = true;
+// let isCorrectPin = false;
+// if (!isBlocked && (isTrustedDevice || isCorrectPin)) {
+//     console.log('login success');
+// }else{
+//     console.log('login failed.');
+// }
+
+/*
+প্রবলেম ২: ফ্রি শিপিং (Free Shipping)
+একটি ই-কমার্স ওয়েবসাইট ফ্রি শিপিং দেয় যদি অর্ডারের টোটাল খরচ ৫০ ডলারের বেশি হয় AND কাস্টমার যদি একই শহরের (Local) বাসিন্দা হয়। 
+অথবা, কাস্টমার যদি Premium Member হয়, তবে যেকোনো খরচেই ফ্রি শিপিং পাবে।
+*/
+
+// let isPremium = true;
+// let cost = 40;
+// let isLocal = true;
+
+// if (isPremium || (cost > 50 && isLocal)) {
+//     console.log('free shipping');
+// }else{
+//     console.log('pay cost for shipping.');
+// }
+
+/*
+প্রবলেম ৩: রক্তদান eligibility (Blood Donation)
+রক্ত দিতে হলে বয়স ১৮ থেকে ৬০ বছরের মধ্যে হতে হবে AND ওজন ৫০ কেজির বেশি হতে হবে। 
+কিন্তু গত ৯টি মাসের মধ্যে যদি কোনো ট্যাটূ (Tattoo) করানো হয়ে থাকে, তবে রক্ত দেওয়া যাবে না।
+*/
+
+// let age = 50;
+// let weight = 65;
+// let tattoo = 2;
+
+// if (tattoo > 9 && (age >= 18 && age <= 60) && weight > 50 ) {
+//     console.log('donate.');
+// }else{
+//     console.log('no donate.');
+// }
+
+/*
+প্রবলেম ১: এটিএম বুথ থেকে টাকা তোলা (ATM Withdrawal)
+একটি এটিএম বুথ থেকে টাকা তুলতে হলে ইউজারকে অবশ্যই সঠিক পিন (Correct PIN) দিতে হবে। 
+এরপর বুথে পর্যাপ্ত টাকা (Enough Cash) থাকতে হবে। 
+তবে ইউজার যদি VIP অ্যাকাউন্ট হোল্ডার হন, তবে বুথে টাকা কম থাকলেও ব্যাংক অন্য ফান্ড থেকে টাকা দিয়ে দেবে (অর্থাৎ বুথের ক্যাশ চেক করার দরকার নেই)।
+*/
+
+// let isPIN = true;
+// let hasCash = 30000;
+// let isVIP = false;
+
+// if (isPIN && (isVIP || hasCash >= 5000)) {
+//     console.log('cash out.');
+// }else{
+//     console.log('sorry!');
+// }
+
+/* 
+প্রবলেম ২: মুভি থিয়েটারে টিকিট কেনা (Movie Ticket Pricing)
+একটি মুভি থিয়েটারে টিকিটের দাম ফ্রী (০ টাকা) হবে যদি দর্শক অনূর্ধ্ব ৫ বছর বয়সী শিশু (Age <= 5) হয় অথবা একজন মিলিটারি মেম্বার (Military Member) হয়। 
+কিন্তু যদি থিয়েটারে কোনো Special Screening বা প্রিমিয়ার শো চলে, তবে সবার জন্যই টিকিট কেনা বাধ্যতামূলক (কেউ ফ্রী পাবে না)।
+*/
+
+// let age = 13;
+// let militaryMember = false;
+// let isPremiumShow = false;
+
+// if (!isPremiumShow && (age <= 5 || militaryMember)) {
+//     console.log('free ticket.');
+// }else{
+//     console.log('must buy ticket.');
+// }
+
+/*
+প্রবলেম ৩: ক্রেডিট কার্ডের অনুমোদন (Credit Card Approval)
+একটি ব্যাংক আপনাকে ক্রেডিট কার্ড দেবে যদি আপনার মাসিক আয় ৫০,০০০ টাকার বেশি হয় AND আপনার ক্রেডিট স্কোর ৭০০ এর ওপরে থাকে। 
+কিন্তু আপনার যদি আগে থেকে ব্যাংকে কোনো Active Loan Defaulter (ঋণখেলাপী) রেকর্ড থাকে, তবে কোনোভাবেই কার্ড পাওয়া যাবে না।
+*/
+
+// let activeLoanDefaulter = true;
+// let monthlyIncome = 60000;
+// let creditScore = 800;
+
+// if (!activeLoanDefaulter && (monthlyIncome > 50000 && creditScore > 700)) {
+//     console.log('can issue card.');
+// }else{
+//     console.log('can not issue card.');
+// }
+
+/*
+প্রবলেম ৪: ফ্লাইট বোর্ডিং (Flight Boarding Eligibility)
+একজন যাত্রী প্লেনে উঠতে পারবেন যদি তার কাছে বৈধ পাসপোর্ট (Valid Passport) থাকে AND তার কাছে বোর্ডিং পাস (Boarding Pass) থাকে। 
+তবে তিনি যদি একজন Enforcement Officer (যেমন পুলিশ/নিরাপত্তা কর্মী) হন এবং ডিউটিতে থাকেন, তবে বোর্ডিং পাস ছাড়াই শুধু পাসপোর্ট দিয়ে প্লেনে উঠতে পারবেন।
+*/
+
+// let hasPassport = true;
+// let hasBoardingPass = true;
+// let isEnforcementOfficer = false;
+// if (hasPassport && (hasBoardingPass || isEnforcementOfficer)) {
+//     console.log('can entry into plane');
+// }else{
+//     console.log('can not entry plane.');
+// }
+
+
+/*
+প্রবলেম ৫: ই-কমার্স ডিসকাউন্ট (E-commerce Combo Offer)
+একটি শপ আপনাকে ডিসকাউন্ট দেবে যদি আপনি কমপক্ষে ৩টি আইটেম কেনেন OR আপনার মোট বিল ৫০০০ টাকার বেশি হয়। 
+কিন্তু যদি আপনার কার্টে কোনো Clearance Sale এর আইটেম থাকে, তবে এই অফারটি কার্যকর হবে না (অর্থাৎ কোনো ডিসকাউন্ট পাবেন না)।
+*/
+
+// let buyItem = 20;
+// let billTotal = 4000;
+// let isClearenceSale = false;
+
+// if (!isClearenceSale && (buyItem >= 3 || billTotal > 5000)) {
+//     console.log('get 10% discount on total bill.');
+// }else{
+//     console.log('sorry! no discount applicable.');
+// }
+
+/*The Scenario: A library allows you to borrow a book if you have a Library Card AND you have No Overdue Fines. 
+However, if you are a Teacher, you can borrow books instantly (even without a card or fines).
+*/
+
+let isTeacher = false;
+let hasCard = true;
+let hasOverdueFines = true;
+if (isTeacher || (hasCard && hasOverdueFines)) {
+    console.log('take your card.');
 }else{
-    console.log('invalid day.');
+    console.log('sorry! no card for u right now.');
 }
