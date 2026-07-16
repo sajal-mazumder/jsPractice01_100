@@ -282,7 +282,7 @@ Goal: Determine the ticket price.*/
 //      if (isStudent) {
 //         console.log('ticket price is 10$');
 //     }else{
-//     console.log('ticket price is 13$');
+//          console.log('ticket price is 13$');
 //     }
 // }
 
@@ -616,20 +616,18 @@ Current status: Face ID matches, the PIN is incorrect, and the battery is comple
 Is the final scenario TRUE or FALSE for the phone unlocking?
 */
 
-// let battery = false;
-// let faceID = true;
+// let battery = true;
+// let faceID = false;
 // let isPIN = false;
 
-// if (battery === true && (faceID === true || isPIN === true)) {
-//     console.log('you can unlock your phone.');
+// if (battery) {
+//     if (faceID || isPIN) {
+//         console.log('unlock ur phone');
+//     }else{
+//         console.log('match face id or pin');
+//     }
 // }else{
-//     console.log('failed to unlock phone.');
-// }
-
-// if (battery && (faceID || isPIN)) {
-//     console.log('unlock');
-// }else{
-//     console.log('failed.');
+//     console.log('can not unlock phone.');
 // }
 
 /*
@@ -765,14 +763,14 @@ Is the final scenario TRUE or FALSE for the phone unlocking?
 However, if you are a Teacher, you can borrow books instantly (even without a card or fines).
 */
 
-let isTeacher = false;
-let hasCard = true;
-let hasOverdueFines = true;
-if (isTeacher || (hasCard && !hasOverdueFines)) {
-    console.log('take your book.');
-}else{
-    console.log('sorry! no book for u right now.');
-}
+// let isTeacher = false;
+// let hasCard = true;
+// let hasOverdueFines = true;
+// if (isTeacher || (hasCard && !hasOverdueFines)) {
+//     console.log('take your book.');
+// }else{
+//     console.log('sorry! no book for u right now.');
+// }
 
 /*
 Problem 1: The Gym Premium Zone
@@ -797,16 +795,16 @@ A car rental company will rent you a car if you are over 21 years old AND have a
 However, if you are an international tourist, you can bypass the age limit but you absolutely must have an international driver's license.
 Your stats: You are 19 years old, you are an international tourist, and you have an international driver's license.*/
 
-let age = 39;
-let hasDriverLicense = true;
-let intLicense = false;
-let intTourist = true;
+// let age = 39;
+// let hasDriverLicense = true;
+// let intLicense = false;
+// let intTourist = true;
 
-if ((intLicense && intTourist) || ( age > 21 && hasDriverLicense)) {
-    console.log('can rent car.');
-}else{
-    console.log('sorry, no car for u.');
-}
+// if ((intLicense && intTourist) || ( age > 21 && hasDriverLicense)) {
+//     console.log('can rent car.');
+// }else{
+//     console.log('sorry, no car for u.');
+// }
 
 /*
 Problem 3: The Job Interview Shortlist
@@ -814,12 +812,358 @@ A company automatically invites an applicant for an interview if they have a Rec
 For regular applicants, they must have a Computer Science Degree AND at least 2 years of experience to get shortlisted.
 Your stats: You do not have a recommendation letter, you have a CS degree, and you have 5 years of experience.*/
 
-let hasRecommendation = true;
-let hasCSDegree = false;
-let hasExperience = true;
+// let hasRecommendation = true;
+// let hasCSDegree = false;
+// let hasExperience = true;
 
-if (hasRecommendation || (hasCSDegree && hasExperience)) {
-    console.log('please attend interview.');
-}else{
-    console.log('u r not eligible for interview.');
-}
+// if (hasRecommendation || (hasCSDegree && hasExperience)) {
+//     console.log('please attend interview.');
+// }else{
+//     console.log('u r not eligible for interview.');
+// }
+
+/*
+📦 Problem 1: The Automated Warehouse Drone
+An automated shipping drone will launch to deliver a package if it has High Priority tags. 
+For Standard Priority packages, the drone will only launch if the delivery distance is under 5 miles AND the current weather status is Clear.*/
+
+// let isHighPriority = true;
+// let deliveryDistance = 6;
+// let isWeatherGood = true;
+
+// if (isHighPriority || (deliveryDistance < 5 && isWeatherGood)) {
+//     console.log('drone will launch.');
+// }else{
+//     console.log('sorry! drone will not launch.');
+// }
+
+/*
+💳 Problem 2: Credit Card Fraud Alert
+A bank’s security system automatically triggers a fraud alert if a transaction is flagged as an International Withdrawal. 
+For Domestic Transactions, an alert is triggered only if the transaction amount is over $500 AND the user has never shopped at that store before.
+*/
+
+// let isInternationalWithdrawal = false;
+// let transactionAmount = 400;
+// let hasNeverShopped = true;
+
+// if (isInternationalWithdrawal || (transactionAmount > 500 && hasNeverShopped)) {
+//     console.log('fraud sacmer.');
+// }else{
+//     console.log('safe transaction.');
+// }
+
+/*
+✈️ Problem 3: Flight Boarding Clearance
+A passenger is allowed to board an airplane instantly if they have a First Class Ticket. 
+For Economy Passengers, they are allowed to board only if they have a Valid Passport AND their carry-on luggage weighs under 10 kg.
+*/
+
+// let hasFirstClassTicket = false;
+// let hasValidPassport = true;
+// let luggageWeights = 12;
+
+// if (hasFirstClassTicket || (hasValidPassport && luggageWeights < 10)) {
+//     console.log('u are allowed to board airplane.');
+// }else{
+//     console.log('u r not allowed to board airplane.')
+// };
+
+/*
+🚗 Problem 4: Autonomous Car Emergency Braking
+An autonomous car triggers its emergency brakes instantly if a Pedestrian is detected in its path. 
+For Static Obstacles (like trash cans or cones), the brakes are triggered only if the car's current speed is over 30 mph AND the road conditions are Slippery.
+*/
+
+// let isPedestrianDetected = false;
+// let currentSpeed = 25;
+// let isRoadSlippery = true;
+
+// if (isPedestrianDetected || (currentSpeed > 30 && isRoadSlippery)) {
+//     console.log('brake car.');
+// }else{
+//     console.log('dont brake car.');
+// }
+
+/*
+🎓 Problem 5: University Scholarship Qualification
+A university automatically awards a full scholarship if the student is a Valedictorian of their high school. 
+For all other students, they qualify only if they have an SAT Score above 1450 AND their family income is below $40,000.
+*/
+
+// let isValedictorian = false;
+// let isSATScore = 1550;
+// let familyIncome = 45000;
+
+// if (isValedictorian || (isSATScore > 1450 && familyIncome < 40000)) {
+//     console.log('get scholarship');
+// }else{
+//     console.log('pay fees regularly.');
+// }
+
+/*
+🎮 Problem 1: Movie Ticket Pricing System
+A theater decides ticket prices based on age and whether the customer is a student.
+Outer Condition: First check if the person is an Adult (age 18 or above) or a Child (under 18).Inner Condition (For Adults): If they are a student, the ticket is $10. 
+If they are not a student, the ticket is $15.
+Inner Condition (For Children): All children's tickets are $5 (no student check needed).
+*/
+
+// let age = 15;
+// let isStudent = false;
+
+// if (age < 18) {
+//     console.log('ticket price 5$');
+// }else if (isStudent) {
+//     console.log('ticket price 10$');
+// }else{
+//     console.log('ticket price 15$');
+// }
+
+// using ternary operator
+
+// let ticketPrice = (age < 18) ? '5$' : (isStudent ? '10$' : '15$')
+// console.log(ticketPrice);
+
+/*
+💳 Problem 2: E-Commerce Premium Shipping
+An online shop calculates shipping costs based on the total order amount and VIP membership status.
+Outer Condition: First check if the order amount is $100 or more.
+Inner Condition (For $100+ orders): If the customer is a VIP, shipping is Free. 
+If they are not a VIP, shipping costs $5.
+Inner Condition (For under $100 orders): If they are a VIP, shipping costs $10. 
+If they are not a VIP, shipping costs $20.
+*/
+
+// let totalOrder = 170;
+// let isVIP = false;
+
+// if (totalOrder >= 100) {
+//     if (isVIP) {
+//         console.log('shipping free');
+//     }else{
+//         console.log('shipping cost 5$');
+//     }
+// }else if (totalOrder < 100) { // no need this condition, 
+// // because under 100 automatically into else block
+//     if (isVIP) {
+//         console.log('shipping cost 10$');
+//     }else{
+//         console.log('shipping cost 20$');
+//     }
+// }
+
+// using ternary operator 
+
+// let shippingCost = (totalOrder >= 100) ?
+//  (isVIP ? 'shipping free' : 'shipping cost 5$') :  (isVIP ? 'shipping cost 10$ ' : 'shipping cost 20$' );
+//  console.log(shippingCost);
+
+/*
+🏦 Problem 3: ATM Cash Withdrawal Security
+An ATM checks bank accounts before dispensing cash.
+Outer Condition: First check if the entered PIN is correct. If it is wrong, print "Wrong PIN".Inner Condition (If PIN is correct): Check if the account has enough balance for the requested withdrawal amount.
+If yes, print "Cash Dispensed".
+If no, print "Insufficient Balance".
+*/
+
+// let isPinCorrect = false;
+// let balanceEnough = 'yes';
+
+// if (isPinCorrect) {
+//     if (balanceEnough === 'yes') {
+//         console.log('Withdraw ur neccessary balance.');
+//     }else{
+//         console.log('Insufficient balance.');
+//     }
+// }else{
+//     console.log('Wrong Pin.');
+// }
+
+// using ternary operator 
+
+// let logIn = (isPinCorrect) ? (balanceEnough ? 'Withdraw ur money' : 'Insufficient balance') : 'Wrong pin. try again.';
+// console.log(logIn);
+
+/*
+🔐 Problem 4: Website Admin Panel Access
+A security portal controls access to a sensitive dashboard.
+Outer Condition: First check if the user is Logged In. If not, print "Please log in first".
+Inner Condition (If Logged In): Check the user's role.
+If their role is "admin", print "Welcome to Admin Dashboard".
+If their role is anything else, print "Access Denied: Admins Only".
+*/
+
+// let isLoggedIn = false;
+// let isAdmin = false;
+
+// if (isLoggedIn) {
+//     if (isAdmin) {
+//         console.log('Welcome to Admin dashboard.');
+//     }else{
+//         console.log('Access Denied: Admins only.');
+//     }
+// }else{
+//     console.log('Please log in at first.');
+// }
+
+// using ternary operator
+
+// let signIn = (isLoggedIn) ? ( isAdmin ? 'Welcome to admin dashboard.' : 'Access denied. Admin pannels only.') : 'Please log in first attempt.';
+// console.log( signIn);
+
+/*
+⛈️ Problem 5: Smart Thermostat Home Climate Control
+A smart home system decides whether to turn on the AC or Heater based on temperature and humidity.
+Outer Condition: First check if the temperature is above 30°C.
+Inner Condition (If above 30°C): If humidity is above 70%, print "Turn on AC (High Power)". Otherwise, print "Turn on AC (Normal Power)".
+Inner Condition (If 30°C or below): Print "Turn on Heater".
+*/
+
+// let temp = 42;
+// let isHumidity = 80;
+
+// if (temp > 30) {
+//     if (isHumidity > 70) {
+//         console.log('Turn on AC (High Power).');
+//     }else{
+//         console.log('Turn on AC ( Normal Power).');
+//     }
+// }else{
+//     console.log('Oh! Too cold, Turn on Heater.');
+// }
+
+// using ternary operator
+
+// let homeClimateControl = (temp > 30) ? ( isHumidity > 70 ? 'Turn on High power AC' : 'Turn on Normal power AC') : 'Too cold, turn on Heater.';
+// console.log(homeClimateControl);
+
+
+/*
+🚀 Problem 1: Space Rocket Launch Command
+A space agency launches a rocket based on weather, mechanical readiness, and countdown status.Outer Condition: First, check if the weather is Clear AND the wind speed is under 20 mph. 
+If not, print "Launch Aborted: Bad Weather".
+Inner Condition: If the weather is good, check the mechanical systems.
+If isFuelFull is true AND isEngineReady is true, print "Rocket Launched Successfully!".Otherwise, print "Launch Aborted: Systems Failure".
+*/
+
+// let isWeatherClear = true;
+// let isWindSpeed = 15;
+// let isFuelFull = true;
+// let isEngineReady = true;
+
+// using logical operator
+
+// if ((isWeatherClear && isWindSpeed < 20)) {
+//     if (isFuelFull && isEngineReady) {
+//         console.log('Rocket Launched Successfully.');
+//     }else{
+//         console.log('Launch Aborted: System Failured.');
+//     }
+// }else{
+//     console.log('Launch Aborted: Bad Weather');
+// }
+
+// using ternary operator
+
+// let rocketLaunch = (isWeatherClear && isWindSpeed < 20) ? ((isFuelFull && isEngineReady) ? 'Rocket Launched Successfully.' : 'Launch Aborted: System Failured.') : 'Launch Aborted: Bad Weather';
+// console.log(rocketLaunch);
+
+/*
+🎮 Problem 2: E-Sports Tournament Eligibility
+A gaming tournament checks if a player can enter the Pro Division or the Amateur Division.
+Outer Condition: First, check if the player's age is 16 or older. 
+If they are under 16, print "Too young to compete".
+Inner Condition: If they are old enough, check their game rank score.If their score is above 2500 OR they have a Pro License (hasProLicense === true), print "Welcome to the Pro Division!".Otherwise, print "Welcome to the Amateur Division!".
+*/
+
+// let playerAge = 10;
+// let gameRankScore = 3000;
+// let hasProLicense = false;
+
+// // logical operator
+
+// if (playerAge >= 16){
+//     if (gameRankScore > 2500 || hasProLicense) {
+//         console.log('Welcome to the Pro Division!');
+//     }else{
+//         console.log('Welcome to Amateur Division');
+//     }
+// }else{
+//     console.log('Too Young to compete.');
+// }
+
+// // using ternary
+
+// let tournamentEligible = (playerAge >= 16) ? ((gameRankScore > 2500 || hasProLicense) ? 'Welcome to the Pro Division!' : 'Welcome to Amateur Division.') : 'Too Young to compete.';
+// console.log(tournamentEligible);
+
+/*
+🏥 Problem 3: Hospital Emergency Room Triage
+An automated hospital system prioritizes patients when they arrive at the emergency room.
+Outer Condition: First, check if the patient has a Life-Threatening Emergency (isCritical === true).
+If true, print "Admit immediately to ICU!".
+Inner Condition: If they are not critical, check their fever temperature.
+If their temperature is above 38°C (100.4°F) AND they have a cough (hasCough === true), print "Direct to Fever Clinic".
+Otherwise, print "Please wait in the Regular Waiting Room".
+*/
+
+// let isCritical = true;
+// let feverTemp = 36;
+// let hasCough = true;
+
+// // using nested if else and logical operator
+// if (isCritical) {
+//     console.log('Admit immediately to ICU!');
+// }else if (feverTemp > 38 && hasCough) {
+//     console.log('Direct to fever Clinic.');
+// }else{
+//     console.log('Please wait in the regular waiting room.');
+// }
+
+// // using ternary
+
+// let patientAdmit = (isCritical) ? 'Admit immediately to ICU!' : ((feverTemp > 38 && hasCough) ? 'Direct to fever clinid' : 'Please wait in the regular waiting room.');
+// console.log(patientAdmit);
+
+
+// %%% and or short hand 
+
+// && first search falsy value, if get falsy value, print it. if get truthy value go to right.
+// || search truth value first, if get truthy value, print it. if get falsy value go to right.
+
+// let fruit = 'apple' && 'mango';
+// let frt = null && 'bannana'
+// console.log(fruit, frt);
+// let fish = 'ilish' || 'katla';
+// let fsh = "" || 'rui'
+// console.log(fish, fsh);
+
+// console.log('apple' && 'mango');
+
+/*
+🌐 Problem 1: Profile Display Name (The || Shorthand)
+A user is setting up their social media account. 
+You want to save their displayName. 
+If they provided a custom nickname, use it. 
+If their nickname is empty (""), use their email address as a backup default value.
+*/
+
+let nickname = "";
+let emailAddress = 'abc@gamil.com';
+
+// let displayName = nickname || emailAddress; // abc@gmail.com
+let displayName = nickname && emailAddress; // empty
+console.log(displayName);
+
+/*
+🔔 Problem 2: Notification Dispatcher (The && Shorthand)
+An app wants to send a notification popup to a user. 
+However, you must respect their privacy settings. 
+Only trigger the function sendNotification() if the variable isNotificationEnabled is true.
+*/
+
+let isNotificationEnabled = true;
+let notification = sendNotification();
+let getNotification = isNotificationEnabled && notification;
+console.log(getNotification);
