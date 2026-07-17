@@ -1141,6 +1141,8 @@ Otherwise, print "Please wait in the Regular Waiting Room".
 
 // console.log('apple' && 'mango');
 
+// using && || shorthand
+
 /*
 🌐 Problem 1: Profile Display Name (The || Shorthand)
 A user is setting up their social media account. 
@@ -1149,12 +1151,12 @@ If they provided a custom nickname, use it.
 If their nickname is empty (""), use their email address as a backup default value.
 */
 
-let nickname = "";
-let emailAddress = 'abc@gamil.com';
+// let nickname = "";
+// let emailAddress = 'abc@gamil.com';
 
 // let displayName = nickname || emailAddress; // abc@gmail.com
-let displayName = nickname && emailAddress; // empty
-console.log(displayName);
+// let displayName = nickname && emailAddress; // empty
+// console.log(displayName);
 
 /*
 🔔 Problem 2: Notification Dispatcher (The && Shorthand)
@@ -1163,7 +1165,120 @@ However, you must respect their privacy settings.
 Only trigger the function sendNotification() if the variable isNotificationEnabled is true.
 */
 
-let isNotificationEnabled = true;
-let notification = sendNotification();
-let getNotification = isNotificationEnabled && notification;
-console.log(getNotification);
+// let isNotificationEnabled = true;
+// let notification = sendNotification();
+// let getNotification = isNotificationEnabled && notification;
+// console.log(getNotification);
+
+/*
+🛒 Problem 3: Cart Checkout Validation (The && and || Combo)An e-commerce app is determining if the "Checkout" button should be active. The checkout should only proceed if the cart is not empty (isCartEmpty === false). If it proceeds, you want to store the discountCode. If there is no discount code available (empty string ""), automatically apply a default backup code "WELCOME10".
+*/
+
+
+// ***** my imagination and making problem for first time. ***
+
+/* 
+For BCS exam application an examini must be Bangladeshi and age less 30. 
+For special quota age consider upto 32. 
+The examine must complete honors 4th year exam in the circulation given last date of apply.
+No 3rd class result accepted in education ssc, hsc.
+*/
+
+// using nested and logical operator
+
+// let isBangladeshi = true;
+// let hasQuota = true;
+// let age = 35;
+// let honors4thYearCompleted = true;
+// let sscResult = 2;
+// let hscResult = 2;
+
+// let maxAge = hasQuota ? 32 : 30;
+
+// if (isBangladeshi) {
+//     if (age <= maxAge) {
+//         if (honors4thYearCompleted) {
+//             // Standard BCS rule: No 3rd class allowed (GPA below 2.0)
+//             if (sscResult >= 2 && hscResult >= 2) {
+//                 console.log("Application Successful: You are eligible for the BCS exam.");
+//             } else {
+//                 console.log("Application Failed: 3rd class results are not accepted.");
+//             }
+//         } else {
+//             console.log("Application Failed: You must complete Honors 4th year by the deadline.");
+//         }
+//     } else {
+//         console.log(`Application Failed: Age exceeds the maximum limit of ${maxAge} years.`);
+//     }
+// } else {
+//     console.log("Application Failed: You must be a Bangladeshi citizen.");
+// }
+
+/*
+A child get its BRC if it borns in Banglades or its parents are Bangladeshi.
+If father or mother has their BRC, can apply for childs BRC otherwise first get fathers or mothers BRC.
+If child is under 45 days,apply charge free. Age under 3 years and over 45 days charges 200 tk. above 3 years charges 500tk.
+*/
+
+// let hasBornInBd = true;
+// let isParentAreBd = false;
+// let ageInDays = 1460;  //  4 years = 4 * 365
+// let hasFatehrBRC = true;
+// let hasMotherBRC = false;
+// if (hasBornInBd || isParentAreBd) {
+//     // console.log('You are primarilly qualified.');
+//     if (hasFatehrBRC || hasMotherBRC) {
+//         // console.log('You are secondarilly qualified.');
+//         if (ageInDays <= .12328) {
+//             console.log('Application charge 0 tk.');
+//         }else if ( ageInDays <= 1095) {
+//             console.log('Application charge 150 tk.');
+//         }else{
+//             console.log('Application charge 500 tk.');
+//         }
+//     }else{
+//         console.log("First collect your fathers or mothers BRC.");
+//     }
+// }else{
+//     console.log('Bangladesh Law rejects your application.');
+// }
+
+/*
+To get a personal Loan from a bd bank u must be bangladeshi. You have an account in existing bank. You must provide your valid papers in bank. Finally bank will enquair your income is enough to pay your loan installment. Than bank will approve loan according to your income range.
+*/
+
+let isBangladeshi = true;
+let hasAccount = true;
+let allPapersOk = true;
+let hasCurrentLoan = true;
+let cibReport = 'ok';
+let monthlyIncome = 80000;
+
+if (isBangladeshi) {
+    // console.log('Primarily qualified for personal loan.');
+    if (hasAccount) {
+        // console.log('Submit your all valid papers and source of income and monthly income range.');
+        if (allPapersOk && hasCurrentLoan) {
+            // console.log('We are waiting your cib report.');
+            if (cibReport === 'ok') {
+                // console.log('Positive cib report. Next steps should be start.');
+                if (monthlyIncome <= 20000) {
+                    console.log('can approve 2 lacs taka.');
+                }else if (monthlyIncome <= 50000) {
+                    console.log('can approve 5 lacs taka');
+                }else{
+                    console.log('can approve maximum 10 lacs taka.');
+                }
+
+            }else{
+                console.log('Negetive cib report.');
+            }
+        }else{
+            console.log('Ensure your valid papers or NOC for current loan.');
+        }
+    }else{
+        console.log('At first open an accout any of our bank branch.');
+    }
+}else{
+    console.log('Sorry! we can not allow you for a personal loan.');
+}
