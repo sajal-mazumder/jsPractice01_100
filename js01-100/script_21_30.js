@@ -82,36 +82,36 @@
 
 // ### cls 24, switch statements
 
-let date = new Date();
-switch (date.getMonth()) {
-    case 0:
-        console.log('january');
-        break;
-    case 1: 
-        console.log('february');
-        break;
-    case 2:
-        console.log('march');
-        break;
-    case 3:
-        console.log('april');
-        break;
-    case 4:
-        console.log('may');
-        break;
-    case 5:
-        console.log('june');
-        break;
-    case 6:
-        console.log('july');
-        break;
-    case 7:
-        console.log('august');
-        break;
-    default:
-        console.log('unwanted number');
-        break;
-}
+// let date = new Date();
+// switch (date.getMonth()) {
+//     case 0:
+//         console.log('january');
+//         break;
+//     case 1: 
+//         console.log('february');
+//         break;
+//     case 2:
+//         console.log('march');
+//         break;
+//     case 3:
+//         console.log('april');
+//         break;
+//     case 4:
+//         console.log('may');
+//         break;
+//     case 5:
+//         console.log('june');
+//         break;
+//     case 6:
+//         console.log('july');
+//         break;
+//     case 7:
+//         console.log('august');
+//         break;
+//     default:
+//         console.log('unwanted number');
+//         break;
+// }
 
 // @@@ cls 25, logical operators, && || !
 
