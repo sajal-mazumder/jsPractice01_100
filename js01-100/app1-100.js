@@ -1312,3 +1312,5 @@ let openAccout1 = isBangladeshi
 
     console.log('aple');
     console.log('mango');
+    console.log(2);
+    console.log(5.5);
