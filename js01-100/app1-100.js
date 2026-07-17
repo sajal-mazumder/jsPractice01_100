@@ -1309,3 +1309,6 @@ let openAccout1 = isBangladeshi
         : 'open new account') 
     : 'Sorry! we can not allow you for a personal loan.';
     console.log(openAccout1);
+
+    console.log('aple');
+    console.log('mango');
