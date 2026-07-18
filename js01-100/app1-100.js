@@ -1247,66 +1247,123 @@ If child is under 45 days,apply charge free. Age under 3 years and over 45 days 
 To get a personal Loan from a bd bank u must be bangladeshi. You have an account in existing bank. You must provide your valid papers in bank. Finally bank will enquair your income is enough to pay your loan installment. Than bank will approve loan according to your income range.
 */
 
+// let isBangladeshi = true;
+// let hasAccount = true;
+// let allPapersOk = true;
+// let hasCurrentLoan = true;
+// let cibReport = 'ok';
+// let monthlyIncome = 15000;
+// let hasNOC = true;
+
+// let isGovJobHolder = true;
+// let isPrivateJobHolder = false;
+// let isBussinessMan = false;
+// let isFarmar = false;
+
+// if (isBangladeshi) {
+//     // console.log('Primarily qualified for personal loan.');
+//     if (hasAccount) {
+//         // console.log('Submit your all valid papers and source of income and monthly income range.');
+//         if (allPapersOk) {
+//             // console.log('We are waiting your cib report.');
+//             if (hasCurrentLoan && !hasNOC) {
+//                 console.log('Provide a NOC on current active loan.');
+//             }else{
+//                 // console.log('We are waiting for ur cib report.');
+//                 if (cibReport === 'ok') {
+//                     // console.log('Positive cib report. Next steps should be start.');
+//                     if (monthlyIncome <= 20000) {
+//                         if (isGovJobHolder) {
+//                             console.log('can approve 3 lac tk.');
+//                         }else if (isPrivateJobHolder) {
+//                             console.log('can approve 2 lac and 50 thousand tk.');
+//                         }else if (isBussinessMan) {
+//                             console.log('can approve 2 lac tk.');
+//                         }else if (isFarmar) {
+//                             console.log('can approve 1 lac tk.');
+//                         }else{
+//                             console.log('boboghure.');
+//                         }
+//                         // console.log('can approve 2 lacs tkk.');
+//                     }else if (monthlyIncome <= 50000) {
+//                         console.log('can approve 4 lacs tk.');
+//                     }else{
+//                         console.log('can approve maximum 10 lacs tk.');
+//                     }
+//                 }else{
+//                     console.log('Negetive cib report.');
+//                 }
+//             }
+//         }else{
+//             console.log('Ensure your valid papers please.');
+//         }
+//     }else{
+//         console.log('At first open an accout any of our bank branch.');
+//     }
+// }else{
+//     console.log('Sorry! we can not allow you for a personal loan.');
+// }
+
+// ternary
+
+// let openAccout = (isBangladeshi)? ((hasAccount) ? ((allPapersOk)  ? (((hasCurrentLoan && !hasNOC) ? 'noc ok' : ((cibReport === 'ok') ? ((monthlyIncome <= 20000) ? 'loan 2 lac' : ((monthlyIncome <= 50000) ? 'loan 3 lacs' : 'loan max 10 lacs')) : 'cib not ok' ) )) : 'provide ur valid paper.') : 'open new account' ) :'Sorry! we can not allow you for a personal loan.';
+// console.log(openAccout);
+
+
+
+// let openAccout1 = isBangladeshi 
+//     ? (hasAccount 
+//         ? (allPapersOk  
+//             ? ((hasCurrentLoan && !hasNOC) 
+//                 ? 'noc ok' 
+//                 : (cibReport === 'ok' 
+//                     ? (monthlyIncome <= 20000 ? 'loan 2 lac' 
+//                     : monthlyIncome <= 50000 ? 'loan 3 lacs' 
+//                     : 'loan max 10 lacs') 
+//                     : 'cib not ok')) 
+//             : 'provide ur valid paper.') 
+//         : 'open new account') 
+//     : 'Sorry! we can not allow you for a personal loan.';
+//     console.log(openAccout1);
+
+
+// when function will start this code will run instead of nested if else
+
 let isBangladeshi = true;
 let hasAccount = true;
 let allPapersOk = true;
 let hasCurrentLoan = true;
 let cibReport = 'ok';
-let monthlyIncome = 110000;
+let monthlyIncome = 15000;
 let hasNOC = true;
 
-if (isBangladeshi) {
-    // console.log('Primarily qualified for personal loan.');
-    if (hasAccount) {
-        // console.log('Submit your all valid papers and source of income and monthly income range.');
-        if (allPapersOk) {
-            // console.log('We are waiting your cib report.');
-            if (hasCurrentLoan && !hasNOC) {
-                console.log('Provide a NOC on current active loan.');
-            }else{
-                // console.log('We are waiting for ur cib report.');
-                if (cibReport === 'ok') {
-                    // console.log('Positive cib report. Next steps should be start.');
-                    if (monthlyIncome <= 20000) {
-                        console.log('can approve 2 lacs tkk.');
-                    }else if (monthlyIncome <= 50000) {
-                        console.log('can approve 4 lacs tk.');
-                    }else{
-                        console.log('can approve maximum 10 lacs tk.');
-                    }
-                }else{
-                    console.log('Negetive cib report.');
-                }
-            }
-        }else{
-            console.log('Ensure your valid papers please.');
+let profession = 'government'; // Use a single string instead of 4 booleans
+
+function evaluateLoan() {
+    // 1. Structural Guard Clauses (Check prerequisites first)
+    if (!isBangladeshi) return 'Sorry! we can not allow you for a personal loan.';
+    if (!hasAccount) return 'At first open an account at any of our bank branches.';
+    if (!allPapersOk) return 'Ensure your valid papers please.';
+    if (hasCurrentLoan && !hasNOC) return 'Provide a NOC on current active loan.';
+    if (cibReport !== 'ok') return 'Negative CIB report.';
+
+    // 2. Income & Profession Evaluation
+    if (monthlyIncome <= 20000) {
+        switch(profession) {
+            case 'government': return 'can approve 3 lac tk.';
+            case 'private':    return 'can approve 2 lac and 50 thousand tk.';
+            case 'business':   return 'can approve 2 lac tk.';
+            case 'farmer':     return 'can approve 1 lac tk.';
+            default:           return 'Unknown profession or missing data.';
         }
-    }else{
-        console.log('At first open an accout any of our bank branch.');
+    } 
+    
+    if (monthlyIncome <= 50000) {
+        return 'can approve 4 lacs tk.';
     }
-}else{
-    console.log('Sorry! we can not allow you for a personal loan.');
+
+    return 'can approve maximum 10 lacs tk.';
 }
 
-// ternary
-
-let openAccout = (isBangladeshi)? ((hasAccount) ? ((allPapersOk)  ? (((hasCurrentLoan && !hasNOC) ? 'noc ok' : ((cibReport === 'ok') ? ((monthlyIncome <= 20000) ? 'loan 2 lac' : ((monthlyIncome <= 50000) ? 'loan 3 lacs' : 'loan max 10 lacs')) : 'cib not ok' ) )) : 'provide ur valid paper.') : 'open new account' ) :'Sorry! we can not allow you for a personal loan.';
-console.log(openAccout);
-
-
-
-let openAccout1 = isBangladeshi 
-    ? (hasAccount 
-        ? (allPapersOk  
-            ? ((hasCurrentLoan && !hasNOC) 
-                ? 'noc ok' 
-                : (cibReport === 'ok' 
-                    ? (monthlyIncome <= 20000 ? 'loan 2 lac' 
-                    : monthlyIncome <= 50000 ? 'loan 3 lacs' 
-                    : 'loan max 10 lacs') 
-                    : 'cib not ok')) 
-            : 'provide ur valid paper.') 
-        : 'open new account') 
-    : 'Sorry! we can not allow you for a personal loan.';
-    console.log(openAccout1);
+console.log(evaluateLoan());
 
